@@ -22,9 +22,9 @@ public class Prime_NumberV2 extends Thread {
     int nombre = new Scanner(System.in).nextInt();  
           
          ArrayList<Integer> lnb = new ArrayList<Integer>();
-        for (int i = 2; i < nombre; i++) {
+        for (int i = 3; i < nombre; i=i+2) {
             int nbDiv = 0;
-            for (int j = 1; j <= i; j++) {
+            for (int j = 2; j < Math.sqrt(i-1); j++) {
                 if (i % j == 0) {
                     nbDiv++;
                 }
